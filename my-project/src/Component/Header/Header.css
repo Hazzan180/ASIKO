@@ -1,0 +1,142 @@
+/* ======= General Header Styles ======= */
+.header {
+    background-color: #fff;
+    padding: 10px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Highlight the current page */
+.navbar ul li a.current-page {
+    color: #AC231E; 
+}
+
+/* ======= Navbar Styling ======= */
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    position: relative;
+    padding: 10px 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    display: block;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover {
+    color: #AC231E;
+}
+
+.open-icon, .close-icon{
+    display: none;
+}
+
+/* ======= Dropdown Styling ======= */
+.navbar ul li ul {
+    position: absolute;
+    left: 0;
+    background-color: #fff;
+    width: 260px;
+    display: none;
+    border-radius: 6px;
+    overflow: hidden;
+    padding: 8px 0;
+}
+
+.navbar ul li ul li a {
+    padding: 12px 20px;
+    display: block;
+    font-size: 14px;
+    color: #333;
+}
+
+.navbar ul li ul li a:hover {
+    background: #f8f8f8;
+    color: #AC231E;
+}
+
+.navbar ul li:hover > ul {
+    display: block;
+}
+
+/* ======= Mobile Navigation ======= */
+@media (max-width: 799px) {
+    .header {
+        padding: 12px 20px;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 280px;
+        background-color: #fff;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        padding: 70px 20px;
+        overflow-y: auto;
+        transition: right 0.3s ease-in-out;
+    }
+    .navbar.active-menu {
+        right: 0;
+    }
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    .navbar ul li {
+        width: 100%;
+    }
+    .navbar ul li ul {
+        position: relative;
+        width: 100%;
+        max-height: 200px;
+        overflow-y: auto;
+        border-radius: 4px;
+    }
+    .navbar::-webkit-scrollbar {
+        display: none;
+    }
+    .open-icon, .close-icon {
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+    }
+    .close-icon {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 477px) {
+    .header {
+        padding: 10px 15px;
+    }
+    .navbar {
+        width: 250px;
+    }
+}
