@@ -15,7 +15,7 @@ import GasTerminalling from "../Pages/GasTerminalling";
 import GTD from "../Pages/GTD";
 import APL from "../Pages/APL";
 import GTSCL from "../Pages/GTSCL";
-import GTGOP from "../Pages/GTGOP.JSX";
+import GTGOP from "../Pages/GTGOP";
 import AZCL from "../Pages/AZCL";
 import AHCL from "../Pages/AHCL";
 
