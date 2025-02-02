@@ -1,6 +1,6 @@
 import React,{useRef} from 'react'
 import {NavLink, Link, useNavigate, useLocation} from 'react-router-dom'
-import './header.css'
+import './Header.css'
 
 /*import images */
 import Logo from '../../assets/Logo.png'
