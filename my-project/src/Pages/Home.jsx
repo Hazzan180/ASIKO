@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import Helment from '../Component/Helment/Helment';
 import Hero from '../Component/Hero/Hero';
 
@@ -9,6 +10,41 @@ import homeicon1 from "../assets/homeicon1.svg";
 import homeicon2 from "../assets/homeicon2.svg";
 import homeicon3 from "../assets/homeicon3.png";
 import homeicon4 from "../assets/homeicon4.png";
+
+import svg from "../assets/careerSvg.svg"
+import homicons1 from "../assets/homicons1.jpeg"
+import homicons2 from "../assets/homicons2.jpeg"
+import homicons3 from "../assets/homicons3.jpeg"
+import homicons4 from "../assets/homicons4.jpeg"
+import homicons5 from "../assets/homicons5.jpeg"
+
+const services = [
+  {
+    img: homicons1,
+    title: "Sustainable Fuels",
+    text: "Our LNG and LPG solutions are a reliable, environmentally friendly alternative to traditional fossil fuels, contributing to carbon emission reduction and supporting sustainable development across industries."
+  },
+  {
+    img: homicons2,
+    title: "Renewable Energy",
+    text: "Our innovative solutions harness the power of renewable resources such as solar and biogas, enabling businesses and communities to reduce their carbon footprint and promote a cleaner, sustainable future."
+  },
+  {
+    img: homicons3,
+    title: "Power",
+    text: "From LPG vehicle conversions to gas-powered power plants, we leverage our Power-as-a-service model to improve gas adoption and utilisation, contributing to reduced emissions and improved energy efficiency."
+  },
+  {
+    img: homicons4,
+    title: "Logistics",
+    text: "Asiko Energy embodies operational excellence. Our streamlined supply chain practices and stringent quality control ensure the delivery of superior energy solutions that adhere to the highest industry standards."
+  },
+  {
+    img: homicons5,
+    title: "Supply & Trading",
+    text: "Our efficient sales and top-notch distribution methods ensure that we can guarantee our clients' energy security while remaining competitively priced."
+  },
+]
 
 const Home = () => {
   return (
@@ -83,8 +119,46 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Section 4 */}
-      
+     {/* Section 4 */}
+     <div className="relative px-6 md:px-[3%] py-12 font-poppins text-center">
+        {/* Background Image */}
+        <img src={svg} alt="Background" className="absolute top-0 left-0 w-full h-full object-cover -z-10 " />
+
+       <div className="px-6 md:px-[10%] py-8 text-start">
+       <h3 className="text-lg font-semibold text-secondary ">WHAT WE DO</h3>
+        <h2 className="text-3xl font-bold text-secondary my-4">Comprehensive Energy Solutions</h2>
+        <p className="text-secondary max-w-2xl  text-start">
+          At Asiko Energy, we deliver comprehensive energy solutions to meet the diverse needs of our clients. Our portfolio includes clean energy solutions such as Propane, LPG, LNG, and renewable energy, supporting a sustainable future.
+        </p>
+       </div>
+
+     {/* Card Section */}
+<div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+  {services.map((service, index) => (
+    <motion.div 
+      key={index}
+      className="relative rounded-xl shadow-lg overflow-hidden cursor-pointer group p-6 flex flex-col justify-center text-start min-h-[400px]"
+      style={{ 
+        backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.3)), url(${service.img})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center"
+      }}
+      whileHover={{ scale: 1.05 }}
+      transition={{ duration: 0.3 }}
+    >
+      <h2 className="relative text-xl text-secondary font-semibold z-10">{service.title}</h2>
+      <p className="relative text-sm mt-2 text-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+        {service.text}
+      </p>
+    </motion.div>
+  ))}
+</div>
+
+
+
+
+      </div>
+
     </Helment>
   );
 };
