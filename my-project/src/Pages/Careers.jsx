@@ -11,6 +11,8 @@ import Oedit from "../assets/Oedit.svg"
 import Oteam from "../assets/Oteam.svg"
 import Otest from "../assets/test.svg"
 
+
+
 // Data for the "How we hire" section
 const hireSteps = [
   {
@@ -41,6 +43,7 @@ const hireSteps = [
 ];
 
 const Careers = () => {
+
   return (
     <div>
        <Banner contest={"Careers"} bannerImg={CareerBanner}/>

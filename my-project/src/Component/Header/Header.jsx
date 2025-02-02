@@ -147,7 +147,7 @@ const Header = () => {
 
           <li><NavLink to="/careers" onClick={closeActiveBar} className={isCurrentPage('/careers')}>Careers</NavLink></li>
           
-          <button onClick={getInTouch} className="bg-mainColor text-secondary rounded-3xl font-medium border  py-2 px-4 ">
+          <button onClick={getInTouch} className="bg-mainColor transition hover:bg-mainColor/80 text-secondary rounded-3xl font-medium border  py-2 px-4 ">
             Get In Touch
           </button>
           <div className='close-icon' onClick={closeMenu}>

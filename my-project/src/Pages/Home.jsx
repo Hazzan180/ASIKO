@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import Helment from '../Component/Helment/Helment';
 import Hero from '../Component/Hero/Hero';
 
+import {useNavigate,} from 'react-router-dom'
+
 // Images
 import whoweare from "../assets/whoweare.png";
 import homebg1 from "../assets/homebg1.jpeg";
@@ -50,6 +52,24 @@ const services = [
 ]
 
 const Home = () => {
+   const navigae = useNavigate() 
+
+   const investorRelations = () => {
+    navigae('/investorRelations')
+     window.scrollTo({
+      top: 0,
+      behavior: 'smooth', 
+    });
+  }
+
+  const sustainability = () => {
+    navigae('/sustainability')
+     window.scrollTo({
+      top: 0,
+      behavior: 'smooth', 
+    });
+  }
+
   return (
     <Helment title='Home'>
       <Hero />
@@ -162,11 +182,59 @@ const Home = () => {
 
       </div>
 
-      {/*section 5 */}
-      <div>
-        <h2>Discover More...</h2>
-        
+      {/*section 6 */}
+      <div className="px-6 md:px-[10%] py-8 text-center font-poppins cursor-pointer">
+  <h2 className="text-3xl text-primary mb-8">Discover More...</h2>
+
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    {/* Card 1 */}
+    <div className="flex flex-col lg:flex-row items-center bg-white shadow-lg rounded-xl overflow-hidden">
+      {/* Text Section */}
+      <div className="p-6 flex flex-col justify-center text-left w-full lg:w-1/2">
+        <h3 className="text-2xl font-semibold text-primary mb-2">Investor Relations</h3>
+        <p className="text-sm text-gray-700 mb-4">
+          Explore the ways we are rapidly growing in the energy space for the African market.
+        </p>
+        <button onClick={investorRelations} className="bg-mainColor text-secondary px-6 py-2 rounded-md font-medium transition hover:bg-mainColor/80">
+          Explore
+        </button>
       </div>
+
+      {/* Image Section with Zoom Effect */}
+      <div className="w-full lg:w-1/2 overflow-hidden">
+        <img
+          src={homeimgc1}
+          alt="Investor Relations"
+          className="w-full h-64 object-cover transition-transform duration-300 ease-in-out transform hover:scale-110"
+        />
+      </div>
+    </div>
+
+    {/* Card 2 */}
+    <div className="flex flex-col lg:flex-row items-center bg-white shadow-lg rounded-xl overflow-hidden">
+      {/* Text Section */}
+      <div className="p-6 flex flex-col justify-center text-left w-full lg:w-1/2">
+        <h3 className="text-2xl font-semibold text-primary mb-2">Sustainability</h3>
+        <p className="text-sm text-gray-700 mb-4">
+          Discover how we stay in touch with our host community through engagement with stakeholders.
+        </p>
+        <button onClick={sustainability} className="bg-mainColor text-secondary px-6 py-2 rounded-md font-medium transition hover:bg-mainColor/80">
+          Explore
+        </button>
+      </div>
+
+      {/* Image Section with Zoom Effect */}
+      <div className="w-full lg:w-1/2 overflow-hidden">
+        <img
+          src={homeimgc2}
+          alt="Sustainability"
+          className="w-full h-64 object-cover transition-transform duration-300 ease-in-out transform hover:scale-110"
+        />
+      </div>
+    </div>
+  </div>
+      </div>
+
     </Helment>
   );
 };
