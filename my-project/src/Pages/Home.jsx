@@ -18,6 +18,9 @@ import homicons3 from "../assets/homicons3.jpeg"
 import homicons4 from "../assets/homicons4.jpeg"
 import homicons5 from "../assets/homicons5.jpeg"
 
+import homeimgc1 from "../assets/homeimgc1.jpeg"
+import homeimgc2 from "../assets/homeimgc2.jpeg"
+
 const services = [
   {
     img: homicons1,
@@ -159,6 +162,11 @@ const Home = () => {
 
       </div>
 
+      {/*section 5 */}
+      <div>
+        <h2>Discover More...</h2>
+        
+      </div>
     </Helment>
   );
 };
