@@ -12,6 +12,8 @@ import Banner2 from "../../assets/Banner2.jpeg";
 import Banner3 from "../../assets/Banner3.jpeg";
 import Banner4 from "../../assets/Banner4.jpeg";
 
+import {useNavigate,} from 'react-router-dom'
+
 const data = [
   {
     bgImg: Banner1,
@@ -32,6 +34,16 @@ const data = [
 ];
 
 const Hero = () => {
+  const navigae = useNavigate()
+
+  const about = () => {
+    navigae('/ourCompany')
+    closeMenu()
+     window.scrollTo({
+      top: 0,
+      behavior: 'smooth', 
+    });
+  }
   return (
     <div className='hero w-full h-screen cursor-pointer'>
       <Swiper
@@ -48,9 +60,9 @@ const Hero = () => {
               className='w-full h-screen flex flex-col items-center justify-center bg-cover bg-center cursor-pointer' 
               style={{ backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(${item.bgImg})` }}
             >
-              <div className='bg-black bg-opacity-50 text-secondary p-5 rounded-lg text-center'>
+              <div className='bg-black bg-opacity-50 text-secondary p-5 rounded-lg text-center font-poppins'>
                 <h2 className='text-4xl font-bold whitespace-pre-line'>{item.title}</h2>
-                <button className='bg-mainColor text-secondary rounded-full mt-6 font-medium border py-4 px-4'>
+                <button onClick={about} className='bg-mainColor text-secondary rounded-full mt-6 font-medium py-4 px-6'>
                   Learn more about us
                 </button>
               </div>
