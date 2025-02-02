@@ -3,7 +3,7 @@ import {NavLink, Link, useNavigate, useLocation} from 'react-router-dom'
 import './Header.css'
 
 /*import images */
-import Logo from '../../assets/Logo.png'
+import Logo from '../../assets/logo.png'
 
 
 /*import icon */
