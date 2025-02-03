@@ -11,7 +11,7 @@ const Banner = ({ contest, bannerImg }) => {
       }}
     >
       <div className="absolute bottom-4 left-6 text-left text-white px-6">
-        <h1 className="text-secondary text-3xl sm:text-5xl font-bold font-poppins">{contest}</h1>
+        <h1 className="text-secondary text-3xl sm:text-5xl mb-10 font-bold font-poppins">{contest}</h1>
       </div>
     </div>
   );

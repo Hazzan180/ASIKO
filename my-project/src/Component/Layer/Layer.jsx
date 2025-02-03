@@ -1,20 +1,24 @@
-import React from 'react'
-import Router from '../../Routers/Router'
-import Header from '../Header/Header'
-import Footer from '../Footer/Footer'
+import React from "react";
+import { useLocation } from "react-router-dom"; // Import useLocation
+import Router from "../../Routers/Router";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 const Layer = () => {
+  const location = useLocation(); // Get current route
+
   return (
     <>
-      <Header/>
-      
+      {/* Hide Header only on AZCL page */}
+      {location.pathname !== "/azcl" && <Header />}
+
       <div>
         <Router />
       </div>
 
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default Layer
+export default Layer;

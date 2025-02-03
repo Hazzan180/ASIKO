@@ -152,6 +152,7 @@ const OurCompany = () => {
       <Banner contest={"About Us"} bannerImg={companyBanner} />
 
       {/* Section 1 - Hero Section */}
+      
 
       {/* Section 2 */}
      <div className='px-6 md:px-16 lg:px-24 py-12'>
