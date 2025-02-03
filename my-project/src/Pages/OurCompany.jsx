@@ -152,7 +152,20 @@ const OurCompany = () => {
       <Banner contest={"About Us"} bannerImg={companyBanner} />
 
       {/* Section 1 - Hero Section */}
-      
+      <div className='px-6 md:px-16 lg:px-24 pt-12 flex flex-col lg:flex-row justify-between items-center font-poppins bg-[#f0f0f0]'>
+  <div className='mb-6 lg:mb-0'>
+    <h3 className='text-primary text-lg md:text-xl lg:text-3xl mb-6'>
+      Asiko is not only an indigenous entity, grown with indigenous talent, I am proud to say that we are a unique offering in the energy space in Africa with a specific strategic focus: delivering off-grid clean energy to every corner of Africa and becoming the largest independent utility company doing so spanning gas (Propane, LPG, and LNG), as well as electricity.
+    </h3>
+    <h2 className='text-mainColor font-playfair italic font-bold text-2xl md:text-3xl lg:text-4xl mb-4'>
+      Alex Ogedegbe
+    </h2>
+    <p className='text-gray text-lg md:text-xl'>Chairman, Board of Directors</p>
+    <p className='text-gray text-lg md:text-xl'>ASIKO ENERGY HOLDINGS LIMITED</p>
+  </div>
+
+  <img src={cUser} alt="" className='w-full max-w-[300px] lg:max-w-none'/>
+      </div>
 
       {/* Section 2 */}
      <div className='px-6 md:px-16 lg:px-24 py-12'>
@@ -187,7 +200,7 @@ const OurCompany = () => {
       </div>
 
       {/* Section 4*/}
-<div className="px-6 md:px-[10%] py-16 bg-gray-100">
+      <div className="px-6 md:px-[10%] py-16 bg-gray-100">
   <h2 className="text-3xl font-semibold text-primary text-center mb-10">
     Our Vision, Mission & Values
   </h2>
@@ -220,10 +233,10 @@ const OurCompany = () => {
       </p>
     </div>
   </div>
-</div>
+      </div>
 
      {/* section 5 */}
-  <div className="w-full h-[100vh]">
+     <div className="w-full h-[100vh]">
   <iframe 
     className="w-full h-full" 
     src="https://www.youtube.com/embed/2b8lBvL51p4?si=jwpRRIio7vrsP5Pe" 
@@ -233,7 +246,7 @@ const OurCompany = () => {
     referrerPolicy="strict-origin-when-cross-origin" 
     allowFullScreen
   />
-</div>
+     </div>
        
  {/* Section 6 */}
  <div className='px-6 md:px-16 lg:px-24 py-12'>
