@@ -80,7 +80,7 @@ const Home = () => {
           <h3 className="text-lg mb-6">WHO WE ARE</h3>
           <h1 className="text-3xl font-medium">Building a network of</h1>
           <h2 className="text-4xl font-bold font-playfair italic text-mainColor">clean energy solutions.</h2>
-          <p className="text-gray mt-5">At Asiko Energy, we are passionate about transforming West Africa’s energy landscape and driving sustainable development by providing clean energy solutions. With years of expertise and a dedicated team of professionals, we are committed to helping meet today’s energy needs through various solutions, including Propane, LPG, LNG, and renewable energy sources.</p>
+          <p className="text-gray text-[18px] mt-5">At Asiko Energy, we are passionate about transforming West Africa’s energy landscape and driving sustainable development by providing clean energy solutions. With years of expertise and a dedicated team of professionals, we are committed to helping meet today’s energy needs through various solutions, including Propane, LPG, LNG, and renewable energy sources.</p>
         </div>
 
         <div className="md:max-w-[50%] w-full flex justify-center">

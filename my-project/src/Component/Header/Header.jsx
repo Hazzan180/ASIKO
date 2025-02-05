@@ -1,4 +1,4 @@
-import React,{useRef} from 'react'
+import React,{useState, useEffect, useRef} from 'react'
 import {NavLink, Link, useNavigate, useLocation} from 'react-router-dom'
 import './Header.css'
 
@@ -9,14 +9,17 @@ import Logo from '../../assets/logo.png'
 /*import icon */
 import {BiMenu} from 'react-icons/bi'
 import {IoMdClose} from 'react-icons/io'
-import {IoIosArrowDown} from 'react-icons/io'
+import { IoMdArrowDropdown } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
 
 const Header = () => {
   const navRef = useRef()
 
   const navigae = useNavigate()
   const location = useLocation();
- 
+
+  const [sticky, setSticky] = useState(false);
+
   const openMenu = () => navRef.current.classList.add('active-menu')
 
   const closeMenu = () => navRef.current.classList.remove('active-menu')
@@ -24,6 +27,12 @@ const Header = () => {
   const isCurrentPage = (pathname) => {
     return location.pathname === pathname ? 'current-page' : '';
   };
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+        setSticky(window.scrollY > 50);
+    });
+}, []);
 
 
   const getInTouch = () => {
@@ -44,19 +53,17 @@ const Header = () => {
   }
 
   return (
-    <section className='header font-poppins'>
+    <section className={`header ${sticky ? 'dark-nav' : ''}`}>
       <Link to="/">
         <img src={Logo} alt='logo' className='w-[180px] '/>
       </Link>
 
       <div className='navbar' ref={navRef}>
         <ul>
-        <li><NavLink to="/" onClick={closeActiveBar} className={isCurrentPage('/')}>Home</NavLink></li>
-
         <li>
              <div className='flex items-center justify-between gap-1'>
               <NavLink>About Us</NavLink>
-              <IoIosArrowDown className='icon'/>
+              <IoMdArrowDropdown className='Dicon'/>
             </div> 
           <ul>
             <li>
@@ -81,7 +88,7 @@ const Header = () => {
           <li>
              <div  className='flex items-center justify-between gap-1'>
               <NavLink>The Group</NavLink>
-              <IoIosArrowDown className='icon'/>
+              <IoMdArrowDropdown className='Dicon'/>
             </div> 
           <ul>
             <li>
@@ -123,7 +130,7 @@ const Header = () => {
           <li>
              <div  className='flex items-center justify-between gap-1'>
               <NavLink>Sustainabillity</NavLink>
-              <IoIosArrowDown className='icon'/>
+              <IoMdArrowDropdown className='Dicon'/>
             </div> 
           <ul>
             <li>
@@ -142,19 +149,30 @@ const Header = () => {
               </NavLink>
             </li>
           </ul>
-
           </li>
 
           <li><NavLink to="/careers" onClick={closeActiveBar} className={isCurrentPage('/careers')}>Careers</NavLink></li>
-          
-          <button onClick={getInTouch} className="bg-mainColor transition hover:bg-mainColor/80 text-secondary rounded-3xl font-medium border  py-2 px-4 ">
-            Get In Touch
-          </button>
           <div className='close-icon' onClick={closeMenu}>
           <IoMdClose />
           </div>
         </ul>
+        <button
+      onClick={getInTouch}
+      className="small bg-[#AC231E] text-[14px] text-secondary font-semibold px-6 py-[19px] rounded-full flex items-center gap-2  transition-all duration-300 hover:bg-[#8a1c18]"
+      >
+       Get In Touch
+        <IoIosArrowForward className="text-lg" />
+      </button>
       </div>
+
+      <button
+      onClick={getInTouch}
+      className="big bg-[#AC231E] text-[14px] text-secondary font-semibold px-6 py-[19px] rounded-full flex items-center gap-2  transition-all duration-300 hover:bg-[#8a1c18]"
+      >
+       Get In Touch
+        <IoIosArrowForward className="text-lg" />
+      </button>
+
 
       <div className='open-icon' onClick={openMenu}>
       <BiMenu />

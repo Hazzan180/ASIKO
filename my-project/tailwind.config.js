@@ -7,7 +7,7 @@ export default {
   theme: {
     //font
     fontFamily: {
-      "poppins": ['Poppins', 'serif'],
+      "poppins": ['Manrope', 'serif'],
       "playfair": ["Playfair Display", 'serif']
     },
 

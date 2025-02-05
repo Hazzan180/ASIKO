@@ -1,27 +1,51 @@
 /* ======= General Header Styles ======= */
 .header {
-    background-color: #fff;
+    width: 100%;
     padding: 10px 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
-    z-index: 999;
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensures the logo stays on the left and button on the right */
+    z-index: 10;
+    border-bottom: 0.1px solid rgb(126, 126, 126);
+}
+
+.dark-nav {
+    background: #fff;
+    transition: 0.5s;
+}
+
+.dark-nav .navbar ul li a {
+    color: #000;
+}
+
+.Dicon {
+    color: #fff;
+}
+
+.dark-nav .Dicon {
+    color: #000;
 }
 
 /* Highlight the current page */
 .navbar ul li a.current-page {
-    color: #AC231E; 
+    color: #fff;  /* Text remains white */
+    border-bottom: 4px solid #AC231E;  /* Underline is red */
+    padding-bottom: 9px;  /* Adds space between the text and the underline */
+}
+
+.dark-nav .navbar ul li a.current-page {
+    color: #000;
 }
 
 /* ======= Navbar Styling ======= */
 .navbar {
     display: flex;
     align-items: center;
+    margin-left: 0; /* Ensure navbar links are aligned to the left */
+    flex-grow: 1; /* Allows the navbar to take up available space */
 }
 
 .navbar ul {
@@ -37,19 +61,25 @@
 }
 
 .navbar ul li a {
-    text-decoration: none;
-    font-size: 16px;
+    text-decoration: none;  /* Remove default underline */
+    font-size: 14px;
     font-weight: 600;
-    color: #000;
+    color: #fff;  /* Text remains white */
     display: block;
-    transition: color 0.3s ease-in-out;
 }
 
+/* Underline on hover */
 .navbar ul li a:hover {
-    color: #AC231E;
+    color: #fff;  /* Text stays white */
+    border-bottom: 3px solid #AC231E;  /* Underline is red */
+    padding-bottom: 10px;  /* Adds space between the text and the underline */
 }
 
-.open-icon, .close-icon{
+.dark-nav .navbar ul li a:hover {
+    color: #000;
+}
+
+.open-icon, .close-icon {
     display: none;
 }
 
@@ -58,11 +88,12 @@
     position: absolute;
     left: 0;
     background-color: #fff;
-    width: 260px;
+    width: 280px;
     display: none;
     border-radius: 6px;
     overflow: hidden;
-    padding: 8px 0;
+    padding: 4px 0;
+    margin-top: 6px;
 }
 
 .navbar ul li ul li a {
@@ -81,11 +112,30 @@
     display: block;
 }
 
+.small {
+    display: none;
+}
+
 /* ======= Mobile Navigation ======= */
 @media (max-width: 799px) {
+    .dark-nav .navbar ul li a.current-page,
+    .navbar ul li a.current-page {
+        color: #000;
+    }
+
+    .navbar ul li a:hover {
+        color: #000;
+    }
+
+    .big {
+        display: none;
+    }
+
     .header {
         padding: 12px 20px;
+        justify-content: space-between; /* Keep the logo on the left and hamburger button on the right */
     }
+
     .navbar {
         flex-direction: column;
         align-items: flex-start;
@@ -99,17 +149,23 @@
         padding: 70px 20px;
         overflow-y: auto;
         transition: right 0.3s ease-in-out;
+        margin-left: 0; /* Ensure navbar links align left */
+        flex-grow: 1; /* Allow navbar to expand */
     }
+
     .navbar.active-menu {
         right: 0;
     }
+
     .navbar ul {
         flex-direction: column;
         width: 100%;
     }
+
     .navbar ul li {
         width: 100%;
     }
+
     .navbar ul li ul {
         position: relative;
         width: 100%;
@@ -117,14 +173,26 @@
         overflow-y: auto;
         border-radius: 4px;
     }
+
+    .navbar ul li a {
+        color: #000;
+    }
+
+    .Dicon {
+        color: #000;
+    }
+
     .navbar::-webkit-scrollbar {
         display: none;
     }
+
     .open-icon, .close-icon {
+        color: #AC231E;
         display: block;
         font-size: 28px;
         cursor: pointer;
     }
+
     .close-icon {
         position: absolute;
         top: 20px;
@@ -136,6 +204,7 @@
     .header {
         padding: 10px 15px;
     }
+
     .navbar {
         width: 250px;
     }
