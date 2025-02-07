@@ -10,6 +10,7 @@
     justify-content: space-between; /* Ensures the logo stays on the left and button on the right */
     z-index: 10;
     border-bottom: 0.1px solid rgb(126, 126, 126);
+    z-index: 9999;
 }
 
 .dark-nav {
