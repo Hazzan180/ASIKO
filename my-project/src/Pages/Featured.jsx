@@ -1,9 +1,11 @@
 import Banner from "../Component/UI/Banner/Banner";
-import newBanner2 from "../assets/newsBanner2.png";
+import featureB from "../assets/featureB.png";
 import { FaFacebook, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { FaXTwitter, FaWhatsapp } from "react-icons/fa6";
 
 import { Link } from "react-router-dom";
+
+
 
 const data = [
     {
@@ -20,58 +22,47 @@ const data = [
     },
 ]
 
-const NewsDetail1 = () => {
+const Featured = () => {
   return (
     <div>
       <Banner
         contest={"Lite Gas Supports Nigerian Team for Walking Football World Cup"}
-        bannerImg={newBanner2}
+        bannerImg={featureB}
       />
 
-      <section className="px-6 md:px-[10%] py-8 grid grid-cols-1 md:grid-cols-[70%_30%] gap-8 font-poppins text-lg">
+      <section className="px-6 md:px-[10%] py-[8%] grid grid-cols-1 md:grid-cols-[70%_30%] gap-8 font-poppins">
         {/* Left side (70%) */}
-        <div className="space-y-6">
-        <p>
-  <Link to="/gasTerminalling" className="text-mainColor underline">
-    Gas Terminalling
-  </Link>, through its brand Lite Gas, is supporting the Nigeria Walking Football team as they gear up for the sport’s World Cup, in Manchester England come August.
-</p>
+        <div className="space-y-6 text-lg">
 
-          <iframe
-            width="100%"
-            height="315"
-            src="https://www.youtube.com/embed/WHYpBGVVyts?si=o_TIjYFi7KViYu6R"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-            className="rounded-lg"
-          ></iframe>
+          <img src={featureB} alt=""  className="w-[100%] h-[315]"/>
 
           <p className="text-gray">
-            The Walking Football, as the name indicates, follows the rules of conventional football except running. This type of football is slow-paced and aimed at increasing the physical activity of people above 50 for health purposes. The game allows former players or lovers of football to experience the joy of football without being limited by their health conditions.
+          We attended this year’s NLPGA conference and exhibition, marked by the Association’s unveiling of its new rebrand to    <a href="https://www.nigerialpgas.com/" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             className="text-mainColor hover:text-primary transition"
+          >Nigeria Liquefied and Compressed Gases Association (NLCGA). </a>  
+          This rebranding spotlights an exciting expansion of the Association’s scope to include LNG (Liquefied Natural Gas), Hydrogen, Biogas, and CNG (Compressed Natural Gas), which reflect the evolving landscape of the energy sector.
           </p>
 
           <p className="text-gray">
-            The Walking football 1-day tournament, which held in Lagos last weekend in Surulere, was to prepare and raise a formidable team for the upcoming World Cup. The game saw the emergence of the Mangers All Stars football club as winners of the 4-team match.
+          The official unveiling of the rebranded logo and name of the association occurred during the 14th NLCGA Conference and Exhibition on November 6th, 2024, where industry leaders and stakeholders gathered to discuss the future of gas and its crucial role in economic recovery.
           </p>
 
           <p className="text-gray">
-            As a company passionate about improving the health of Nigerians through the adoption of clean energy, we were happy to sponsor an initiative that contributes to the overall health, quality of life and wellbeing of people, through Lite Gas.
+          Our MD, <a href="https://www.linkedin.com/in/felix-ekundayo-b0932980/"
+              target="_blank" 
+             rel="noopener noreferrer"
+             className="text-mainColor hover:text-primary transition">Felix Ekundayo</a> , who also serves as the President of the Association, gave prominent guests and attendees a tour of the exhibition booths and introduced them to some exhibited gas-powered solutions
+             such as <a href="https://www.linkedin.com/company/asiko-power-limited/"
+             target="_blank" 
+             rel="noopener noreferrer"
+             className="text-mainColor hover:text-primary transition"> Asiko Power Limited </a> gas gas-fired cold room, gas-powered water heaters and gas-powered generators.
           </p>
 
-          <p className="font-semibold text-gra">
-  Read more about the Nigeria Walking Football{" "}
-  <a 
-    href="https://guardian.ng/sport/nigerias-walking-football-team-begins-rwandan-tour-today/" 
-    target="_blank" 
-    rel="noopener noreferrer"
-    className="text-mainColor underline"
-  >
-    here
-  </a>
-</p>
+          <p className="text-gray">
+          Our subsidiary, Gas Terminalling, was also present at the event with our top-quality, propane-rated gas cylinders.
+          </p>
 
         </div>
 
@@ -111,4 +102,4 @@ const NewsDetail1 = () => {
   );
 };
 
-export default NewsDetail1;
+export default Featured;

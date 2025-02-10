@@ -18,6 +18,11 @@ import GTSCL from "../Pages/GTSCL";
 import GTGOP from "../Pages/GTGOP";
 import AZCL from "../Pages/AZCL";
 import AHCL from "../Pages/AHCL";
+import NewsMedia from "../Pages/NewsMedia";
+import FootballPage from "../Pages/FootballPage";
+import Townhall from "../Pages/Townhall";
+import Featured from "../Pages/Featured";
+import Update from "../Pages/Update";
 
 const Router = () => {
   return (
@@ -39,10 +44,15 @@ const Router = () => {
       <Route path="gtgop" element={<GTGOP /> } />
       <Route path="azcl" element={<AZCL /> } />
       <Route path="ahcl" element={<AHCL /> } />
+      <Route path="newsMedia" element={<NewsMedia /> } />
       
       {/* Separate Pages for News Articles */}
       <Route path="news/1" element={<NewsDetail1 />} />
       <Route path="news/2" element={<NewsDetail2 />} />
+      <Route path="news/13" element={<FootballPage />} />
+      <Route path="news/12" element={<Townhall />} />
+      <Route path="news/11" element={<Featured />} />
+      <Route path="news/14" element={<Update />} />
     </Routes>
   );
 };
