@@ -46,7 +46,7 @@ const Update = () => {
               According to the Minister, “Today, the federal government through MDGIF is committing N122 billion into the hands of the six investors to help in the dissemination of gas to all sectors of the country. This is not going to be the last. We are going through another round of screening for more investors to get into the line, to drive home the aspiration and the intention. The intention of President Bola Tinubu is to make sure that Nigeria is being driven by gas in a cleaner way.”
               </p>
 
-              <p>The contract signing event took place on the 30th of September, in Abuja.</p>
+              <p className="text-gray">The contract signing event took place on the 30th of September, in Abuja.</p>
     
               <p className="text-gray">
               By moving forward with our <a href=""
