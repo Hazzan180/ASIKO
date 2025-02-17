@@ -23,6 +23,11 @@ import FootballPage from "../Pages/FootballPage";
 import Townhall from "../Pages/Townhall";
 import Featured from "../Pages/Featured";
 import Update from "../Pages/Update";
+import NewsMedia1 from "../Pages/NewsMedia1";
+import NewsMedia2 from "../Pages/NewsMedia2";
+import NewsMedia3 from "../Pages/NewsMedia3";
+import NewsDetail3 from "../Pages/NewsDetail3";
+import AsikoInP from "../Pages/AsikoInP";
 
 const Router = () => {
   return (
@@ -45,14 +50,19 @@ const Router = () => {
       <Route path="azcl" element={<AZCL /> } />
       <Route path="ahcl" element={<AHCL /> } />
       <Route path="newsMedia" element={<NewsMedia /> } />
+      <Route path="asikoInp" element={<AsikoInP /> } />
       
       {/* Separate Pages for News Articles */}
       <Route path="news/1" element={<NewsDetail1 />} />
       <Route path="news/2" element={<NewsDetail2 />} />
+      <Route path="news/3" element={<NewsDetail3 />} />
       <Route path="news/13" element={<FootballPage />} />
       <Route path="news/12" element={<Townhall />} />
       <Route path="news/11" element={<Featured />} />
       <Route path="news/14" element={<Update />} />
+      <Route path="news/15" element={<NewsMedia1 />} />
+      <Route path="news/16" element={<NewsMedia2 />} />
+      <Route path="news/17" element={<NewsMedia3 />} />
     </Routes>
   );
 };

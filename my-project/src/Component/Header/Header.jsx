@@ -127,7 +127,7 @@ const Header = () => {
 
 
         <li><NavLink to="/investorRelations" onClick={closeActiveBar} className={isCurrentPage('/investorRelations')}>Investor Relations</NavLink></li>
-        {/* <li><NavLink to="/newsMedia" onClick={closeActiveBar} className={isCurrentPage('/newsMedia')}>News & Media</NavLink></li> */}
+         <li><NavLink to="/newsMedia" onClick={closeActiveBar} className={isCurrentPage('/newsMedia')}>News & Media</NavLink></li>
           <li>
              <div  className='flex items-center justify-between gap-1'>
               <NavLink>Sustainabillity</NavLink>
