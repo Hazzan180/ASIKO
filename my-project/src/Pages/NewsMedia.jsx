@@ -26,6 +26,14 @@ const NewsMedia = () => {
     });
   };
 
+  const handleViewMoreClick = () => {
+    navigate('/asikoInp'); 
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <div>
       <Banner contest={"News & Media Centre"} bannerImg={NMBanner} />
@@ -145,7 +153,7 @@ const NewsMedia = () => {
       <div className='px-6 md:px-16 lg:px-24 pt-12 mb-40 font-poppins'>
   <div className='flex flex-col sm:flex-row justify-between items-center sm:items-start'>
     <h2 className='text-3xl sm:text-4xl lg:text-5xl mb-4 sm:mb-0 text-center sm:text-left'>News & Insights</h2>
-    <button className="bg-[#AC231E] text-[14px] sm:text-[16px] lg:text-[18px] text-secondary font-semibold px-4 sm:px-10 py-3 rounded-full flex items-center gap-2 transition-all duration-300 hover:bg-[#8a1c18]">
+    <button  className="bg-[#AC231E] text-[14px] sm:text-[16px] lg:text-[18px] text-secondary font-semibold px-4 sm:px-10 py-3 rounded-full flex items-center gap-2 transition-all duration-300 hover:bg-[#8a1c18]" onClick={handleViewMoreClick}>
       View More
       <IoIosArrowForward className="text-lg sm:text-xl" />
     </button>

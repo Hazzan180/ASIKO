@@ -28,6 +28,7 @@ import NewsMedia2 from "../Pages/NewsMedia2";
 import NewsMedia3 from "../Pages/NewsMedia3";
 import NewsDetail3 from "../Pages/NewsDetail3";
 import AsikoInP from "../Pages/AsikoInP";
+import TerminalPro from "../Pages/TerminalPro";
 
 const Router = () => {
   return (
@@ -63,6 +64,7 @@ const Router = () => {
       <Route path="news/15" element={<NewsMedia1 />} />
       <Route path="news/16" element={<NewsMedia2 />} />
       <Route path="news/17" element={<NewsMedia3 />} />
+      <Route path="news/18" element={<TerminalPro />} />
     </Routes>
   );
 };
